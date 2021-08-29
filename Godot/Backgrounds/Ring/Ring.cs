@@ -9,6 +9,9 @@ public class Ring : Node2D
     [Export]
     private Boxer challenger;
 
+    [Export]
+    private Boxer opponent;
+
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Backgrounds/Ring/ring.png" type="Texture" id=1]
 [ext_resource path="res://Boxers/Boxer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Backgrounds/Ring/Ring.cs" type="Script" id=3]
-[ext_resource path="res://Boxers/Boxer.cs" type="Script" id=4]
+[ext_resource path="res://Boxers/Opponents/Johnson/JohnsonOpponent.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Boxers/Challengers/Chimmy/ChimmyChallenger.tscn" type="PackedScene" id=5]
 
 [node name="Ring" type="Node2D"]
 script = ExtResource( 3 )
@@ -20,8 +21,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Challenger" type="Node2D" parent="."]
-position = Vector2( 642.08, 779.459 )
+[node name="Opponent" type="Node2D" parent="."]
+position = Vector2( 698.222, 641.08 )
 
-[node name="Boxer" parent="Challenger" instance=ExtResource( 2 )]
-script = ExtResource( 4 )
+[node name="Boxer" parent="Opponent" instance=ExtResource( 4 )]
+
+[node name="Challenger" type="Node2D" parent="."]
+position = Vector2( 608.422, 751.28 )
+
+[node name="Boxer" parent="Challenger" instance=ExtResource( 5 )]

@@ -1,16 +1,18 @@
 using Godot;
 using System;
 
-public class Dorky : Node2D
+public class Ring : Node2D
 {
     // Declare member variables here. Examples:
     // private int a = 2;
     // private string b = "text";
+    [Export]
+    private Boxer challenger;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        GD.Print("Dingus");
+        
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
